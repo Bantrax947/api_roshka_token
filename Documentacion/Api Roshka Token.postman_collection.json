@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "ae6119a6-abaf-49b5-bea1-375788964524",
+		"name": "Api Roshka Token",
+		"description": "Colección para poder probar los métodos del ejercicio 2 de la prueba técnica de Roshka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36032206"
+	},
+	"item": [
+		{
+			"name": "Probar token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiRnJhbmNvIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsIkZ1bGxOYW1lIjoiVXN1YXJpbyBkZSBwcnVlYmEiLCJleHAiOjE3NTg1NTAyMTYsImlzcyI6Imh0dHBzOi8veW91cmRvbWFpbi5jb20iLCJhdWQiOiJodHRwczovL3lvdXJhcHAuY29tIn0.1S7iyI6Q13B8RLnmEvc3Fk4Fz9LrfQWeRIMpRftQCFk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7255/Auth/profile",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7255",
+					"path": [
+						"Auth",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"Franco\",\r\n  \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7255/Auth/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7255",
+					"path": [
+						"Auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Probar Rol",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInsW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWlCUALQUIERCOSAtcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiRnJhbmNvIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiVXNlciIsIkZ1bGxOYW1lIjoiVXN1YXJpbyBkZSBwcnVlYmEiLCJleHAiOjE3NTg1NTAyMTYsImlzcyI6Imh0dHBzOi8veW91cmRvbWFpbi5jb20iLCJhdWQiOiJodHRwczovL3lvdXJhcHAuY29tIn0.1S7iyI6Q13B8RLnmEvc3Fk4Fz9LrfQWeRIMpRftQCFk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7255/Auth/admin-data",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7255",
+					"path": [
+						"Auth",
+						"admin-data"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
